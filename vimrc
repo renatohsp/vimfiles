@@ -62,20 +62,20 @@ set guioptions-=T
 if has("gui_running")
   "tell the term has 256 colors
   set t_Co=256
-  colorscheme desert 
+  colorscheme candycode 
   set lines=40
   set columns=115
 else
   let g:CSApprox_loaded = 0
-  colorscheme desert
+  colorscheme candycode
 endif
 
 
 if $COLORTERM == 'gnome-terminal'
   set term=gnome-256color
-  colorscheme desert
+  colorscheme candycode
 else
-  colorscheme desert
+  colorscheme candycode
 endif
 
 syntax on                 " Enable syntax highlighting
@@ -102,6 +102,7 @@ nnoremap <C-B> :BufExplorer<cr>
 
 "map to fuzzy finder text mate stylez
 nnoremap <c-f> :FuzzyFinderTextMate<CR>
+nnoremap <c-e> :NERDTree<CR>
 
 "map Q to something useful
 noremap Q gq
@@ -139,7 +140,7 @@ set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set ruler  " Ruler on
-set nu  " Line numbers on
+"set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
  
